@@ -1,0 +1,167 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 1s ease-in-out;
+}
+
+.app-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Input and dropdown styles */
+#city-input, #city-dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#city-input:focus, #city-dropdown:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#city-input {
+    width: 180px; /* Adjust width as needed */
+}
+
+#city-dropdown {
+    cursor: pointer;
+}
+
+#city-input:hover, #city-dropdown:hover {
+    background-color: #f0f0f0;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Loader and weather result styles */
+#weather-result, #loader {
+    margin-top: 20px;
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+#loader {
+    font-size: 20px;
+    color: #007bff;
+}
+
+/* Weather animations */
+@keyframes sunny {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+.sunny-background {
+    background: linear-gradient(135deg, #f7c6c7, #f3e9c4);
+    animation: sunny 10s ease infinite;
+}
+
+.cloudy-background {
+    background: #f3f4f6;
+}
+
+.rainy-background {
+    background: linear-gradient(135deg, #9e9e9e, #c0c0c0);
+    animation: rain 1s infinite;
+}
+
+@keyframes rain {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+.snowy-background {
+    background: #e0e0e0;
+    animation: snow 2s infinite;
+}
+
+@keyframes snow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Additional styles for temperature and weather info */
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff5733;
+    margin: 10px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.weather-info p {
+    margin: 5px 15px;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.city-name {
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.weather-description {
+    font-style: italic;
+    color: #007bff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects */
+.temperature:hover, .weather-info p:hover, .city-name:hover, .weather-description:hover {
+    transform: scale(1.1);
+    color: #007bff; /* Change color on hover if needed */
+}
+
+.weather-info:hover {
+    transform: scale(1.05);
+}
