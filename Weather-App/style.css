@@ -31,13 +31,25 @@ body {
 
 /* Input and dropdown styles */
 #city-input, #city-dropdown {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    appearance: none; /* Hide the default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuNzg3IDQuMjkxYS42LjYgMCAwIDEgMCAuODQybDUuMzE1IDUuMzkxYy4zMzMuMzM4Ljg3Ny4zMzguMTE0IDBsNS4zMTUtNS4zOTFhLjYgLjYgMCAwIDEtLjQyLS42ODVoLTEwLjU4YS42LjYgMCAwIDAtLjQyLjY4NXoiIGZpbGw9IiM0Q0FGNTAiLz48L3N2Zz4=');
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
 }
 
-#city-input:focus, #city-dropdown:focus {
+#city-input:focus, #city-dropdown:focus, #city-dropdown:focus {
     border-color: #007bff;
     outline: none;
 }
@@ -48,21 +60,35 @@ body {
 
 #city-dropdown {
     cursor: pointer;
+    width: 180px;
 }
 
 #city-input:hover, #city-dropdown:hover {
     background-color: #f0f0f0;
 }
 
+#city-dropdown option {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+select::-ms-expand {
+  display: none;
+}
+
 /* Button styles */
 button {
-    padding: 10px 20px;
+    
     border: none;
     background-color: #007bff;
     color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;  
+    padding: 12px 24px; /* Spacing inside the button */
+    font-size: 16px; /* Button text size */
+    font-weight: bold; /* Bold text */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 button:hover {
@@ -165,3 +191,4 @@ button:hover {
 .weather-info:hover {
     transform: scale(1.05);
 }
+  

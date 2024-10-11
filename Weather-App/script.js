@@ -1,4 +1,6 @@
 document.getElementById('city-input').addEventListener('keydown', function(event) {
+    if(document.getElementById('city-input').value === '')
+        document.getElementById('city-dropdown').value = "";
     if (event.key === 'Enter') {
         getWeather();
     }
@@ -69,7 +71,7 @@ async function getWeather() {
         document.getElementById('weather-result').innerHTML = weatherResult;
         document.getElementById('weather-result').classList.remove('hidden');
     } catch (error) {
-        document.getElementById('weather-result').innerHTML = `<p>${error.message}</p>`;
+        document.getElementById('weather-result').innerHTML = `<p style="text-transform: uppercase;">${error.message}</p>`;
         document.getElementById('weather-result').classList.remove('hidden');
     } finally {
         document.getElementById('loader').classList.add('hidden');
