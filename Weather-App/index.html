@@ -9,16 +9,21 @@
 <body>
     <div class="app-container">
         <h1>Weather App</h1>
-        <div class="search-box">
-            <input type="text" id="city-input" placeholder="Enter city name">
+        <div class="search-box">            
             <select id="city-dropdown">
                 <option value="">Select a city</option>
                 <option value="Delhi">Delhi</option>
                 <option value="London">London</option>
                 <option value="Tokyo">Tokyo</option>
                 <option value="Sydney">Sydney</option>
-                <!-- Add more cities as needed -->
+                <option value="Beijing">Beijing</option>
+                <option value="New York">New York</option>
+                <option value="Seoul">Seoul</option>
+                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                <option value="Rome">Rome</option>
+                <option value="Buenos Aires">Buenos Aires</option>
             </select>
+            <input type="text" id="city-input" placeholder="Enter city name">
             <button onclick="getWeather()">Get Weather</button>
         </div>
         <div id="loader" class="hidden">Loading...</div>
