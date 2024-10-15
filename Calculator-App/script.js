@@ -37,6 +37,16 @@ function calculate() {
     }
 }
 
+function calculateSquareRoot() {
+    const currentValue = parseFloat(display.value);
+    if (currentValue >= 0) {
+        display.value = Math.sqrt(currentValue);
+    } else {
+        display.value = "Error";
+    }
+}
+
+
 window.addEventListener('keydown', function(e) {
     if (!isNaN(e.key)) {
         appendNumber(e.key); 
